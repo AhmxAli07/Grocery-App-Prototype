@@ -1,0 +1,17 @@
+// Example only: review and test against your own Firebase project before deployment.
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function owner(uid) { return request.auth != null && request.auth.uid == uid; }
+    match /{catalog}/{product} {
+      allow read: if request.auth != null && catalog in ['design', 'fruits', 'deseart', 'Meats', 'Apple', 'Avocado', 'banana', 'grape', 'Meat', 'Fish', 'FOOD', 'pump', 'Cake', 'MILK', 'Ice Cream', 'Juice', 'Search'];
+      allow write: if false;
+    }
+    match /user/{uid} {
+      allow read, create, update, delete: if owner(uid);
+      match /{list}/{item} {
+        allow read, write: if owner(uid) && list in ['cart', 'fav', 'photos'];
+      }
+    }
+  }
+}

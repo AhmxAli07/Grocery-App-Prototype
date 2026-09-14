@@ -1,0 +1,87 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history/
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ / Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code
+#.vscode/
+
+# Flutter / Dart / Pub
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication
+app.*.symbols
+
+# Obfuscation
+app.*.map.json
+
+# Android build outputs
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Local recovery / audit files
+/work/
+/audit-*.txt
+
+# Internal documentation
+/docs/AUDIT_REPORT.md
+/docs/README_FACTS.md
+
+# Firebase project-specific configuration
+/lib/firebase_options.dart
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local machine / signing configuration
+**/key.properties
+**/local.properties
+
+# Generated / ephemeral platform files
+**/Flutter/ephemeral/
+**/ephemeral/
+
+# Signing keys / certificates
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+
+# Server / Admin credentials
+*service-account*.json
+*serviceAccount*.json
+*firebase-adminsdk*.json
+
+# Release binaries
+*.apk
+*.aab
+
+# Backup files
+*.bak
